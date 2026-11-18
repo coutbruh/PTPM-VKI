@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><meta charset="utf-8"><title>Test Forum</title></head>
+<body>
+  <div class="post" data-comment-id="101">
+    <span class="username">alice</span>
+    <div class="message"><b>Привет</b>, это <i>первый</i> пост!</div>
+  </div>
+
+  <div class="post" data-comment-id="102">
+    <span class="username">bob</span>
+    <div class="message">Второй пост без форматирования</div>
+  </div>
+
+  <!-- запись-обманка: нет username — должна быть пропущена -->
+  <div class="post" data-comment-id="103">
+    <div class="message">Пост без автора</div>
+  </div>
+
+  <!-- запись-обманка: нечисловой id — должна быть пропущена -->
+  <div class="post" data-comment-id="abc">
+    <span class="username">eve</span>
+    <div class="message">Плохой ID</div>
+  </div>
+</body>
+</html>
